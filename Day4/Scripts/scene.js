@@ -74,6 +74,14 @@ function Scene()
             hazard.y = j*32;
             this.hazards.push(hazard);
           }
+          else if (tileID == '2'){
+          var x = i*32;
+          var y = j*32;
+          var w = 32;
+          var h = 32;
+          var soil = new Soil(x,y,w,h);
+          this.soil.push(block);
+          }
         }
       }
     }

@@ -31,7 +31,7 @@ function CeilingHazard()
     this.width = 32;
     this.height = 32;
     this.image = new Image();
-    this.image.src = "Assets/tile-spikes-ceiling.png";
+    this.image.src = "assets/barb wire0.png";
 
     this.draw = function()
     {

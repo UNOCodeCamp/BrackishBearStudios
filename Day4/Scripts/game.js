@@ -6,6 +6,9 @@ game.startTime = null;
 game.isOver = false;
 game.level = 0;
 
+
+
+
 game.start = function()
 {
     var level = maps[game.level];
@@ -13,6 +16,7 @@ game.start = function()
     game.startTime = Date.now();
     input.start();
     game.main();
+    
 };
 
 // The main game loop
@@ -30,6 +34,7 @@ game.main = function()
 // Update game objects
 game.update = function() 
 {
+     audio.playAll();
     player.move(input.x, input.y);
     
     if(exit.isTouching(player))
@@ -54,8 +59,16 @@ game.update = function()
         var hazard = scene.hazards[i];
         if ( hazard.isTouching(player) )
         {
+            //var deathscream = new "Audio(Assets/sfx_deathscream_human2.wav");
+            //deathscream.play();
+            
             game.isOver = true;
         }
     }
+    
+    
+   
+    
 };
+
 
